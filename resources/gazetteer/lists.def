@@ -1,0 +1,16 @@
+paisesOrg.lst:Organizacion:Pais
+diasSemana.lst:Tiempo:DiaSemana
+gentilicios.lst:Persona:Gentilicio
+marcasAuto.lst:Organizacion:Autos
+meses.lst:Tiempo:Mes
+numero.lst:Numero
+profesiones.lst:Persona:Profesion
+tipoLugar.lst:Lugar:Tipo
+tipoOrgEn.lst:Organizacion:Tipo:english
+lugaresEN.lst:Lugar
+misc.lst:Misc
+tipoOrg.lst:Organizacion:Tipo
+tiempo.lst:Tiempo
+paises.lst:Lugar:Pais
+rumbosCardinales.lst:Lugar:RumboCardinal
+saludo.lst::saludo:spanish
