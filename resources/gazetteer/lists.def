@@ -14,3 +14,5 @@ tiempo.lst:Tiempo
 paises.lst:Lugar:Pais
 rumbosCardinales.lst:Lugar:RumboCardinal
 saludo.lst::saludo:spanish
+especialistas.lst:especialista:doctor:spanish
+cuerpo.lst:cuerpo
