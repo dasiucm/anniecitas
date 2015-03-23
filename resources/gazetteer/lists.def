@@ -14,3 +14,4 @@ tiempo.lst:Tiempo
 paises.lst:Lugar:Pais
 rumbosCardinales.lst:Lugar:RumboCardinal
 saludo.lst::saludo:spanish
+cita.lst:Cita:Tipo
