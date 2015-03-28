@@ -15,3 +15,8 @@ paises.lst:Lugar:Pais
 rumbosCardinales.lst:Lugar:RumboCardinal
 saludo.lst::saludo:spanish
 cita.lst:Cita:Tipo
+saludo.lst::saludo:spanish:saludo
+especialistas.lst:especialista:doctor:spanish
+cuerpo.lst:cuerpo
+presentacion.lst::presentacion::nombre
+dni.lst::dni::dni
