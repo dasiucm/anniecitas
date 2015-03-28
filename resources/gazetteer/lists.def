@@ -13,6 +13,8 @@ tipoOrg.lst:Organizacion:Tipo
 tiempo.lst:Tiempo
 paises.lst:Lugar:Pais
 rumbosCardinales.lst:Lugar:RumboCardinal
-saludo.lst::saludo:spanish
+saludo.lst::saludo:spanish:saludo
 especialistas.lst:especialista:doctor:spanish
 cuerpo.lst:cuerpo
+presentacion.lst::presentacion::nombre
+dni.lst::dni::dni
