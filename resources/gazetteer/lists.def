@@ -20,3 +20,4 @@ cuerpo.lst:cuerpo
 presentacion.lst::presentacion::nombre
 dni.lst::dni::dni
 despedida.lst::despedida:spanish:despedida
+fecha.lst::fecha:spanish:fecha
