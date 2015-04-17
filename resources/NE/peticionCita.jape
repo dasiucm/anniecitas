@@ -40,7 +40,7 @@ System.out.println(str);
 Rule: PeticionCita2
 Priority: 50
 (	({Token})*
-	{Token.string == "cita"}
+	{Token.string == "pruebajape"}
 ):peticionCitas
 -->
 :peticionCitas{
@@ -52,6 +52,6 @@ String str = (String)fm.get("string");
 System.out.println(str);
 }
 },
-:peticionCitas.InicioPeticion = {kind = "peticionCita", rule = "PeticionCita2"}
+:peticionCitas.InicioPeticion = {kind = "prueba", rule = "PeticionCita2"}
 
 
