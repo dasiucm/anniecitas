@@ -25,3 +25,5 @@ peticion.lst:InicioPeticion
 consultas.lst:consulta:consulta:spanish:consulta
 nombresPersona.lst::presentacion:spanish:nombre
 anular.lst::::inicioAnulacion
+confirmacion.lst::::si
+negacion.lst::::no
