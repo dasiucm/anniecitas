@@ -17,7 +17,6 @@ MultiPhase:	TestTheGrammars
 Phases:
 saludo
 peticionCita
-identificacionDNI
 numberletter 
 url_pre
 url

@@ -20,7 +20,8 @@ Options: control = brill
 
 Rule: PeticionCita
 Priority: 100
-(	
+(	({Lookup.majorType == "Cita"}	
+	  )
 	 ({Token})*	
 	{Token.string == "cita"}
 ):peticionCitas
