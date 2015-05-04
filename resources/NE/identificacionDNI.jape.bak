@@ -18,8 +18,11 @@ Options: control = brill
 
 Rule: identificacionDNI
 Priority: 100
-(	
-	{Token.string == "pruebadni"}
+(
+ {Token.string =~ "[0-9]{8}"}	
+ {Token.string == "-"}
+ {Token.string =~ "[A-Z]{1}" & Token.length==1}
+// {SpaceToken.string == " "}
 ):identificacionDNI
 -->
 :identificacionDNI{
@@ -32,3 +35,4 @@ System.out.println(str);
 }
 },
 :identificacionDNI.InicioIdentificacion = {kind = "identificacionDNI", rule = "identificacionDNI"}
+
