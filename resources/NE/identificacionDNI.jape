@@ -19,7 +19,7 @@ Options: control = brill
 Rule: identificacionDNI
 Priority: 100
 (
- {Token.string =~ "[0-9]{8}"}	
+ {Token.string =~ "[0-9]{8}", Token.length==8}	
  {Token.string == "-"}
  {Token.string =~ "[A-Z]{1}", Token.length==1}
 // {SpaceToken.string == " "}
@@ -34,5 +34,5 @@ String str = (String)fm.get("string");
 System.out.println(str);
 }
 },
-:identificacionDNI.InicioIdentificacion = {kind = "identificacionDNI", rule = "identificacionDNI"}
+:identificacionDNI.dni = {kind = "identificacionDNI", rule = "identificacionDNI"}
 

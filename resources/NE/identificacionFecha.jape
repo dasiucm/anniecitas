@@ -19,11 +19,11 @@ Options: control = brill
 Rule: identificacionFecha
 Priority: 100
 (
-  {Token.string =~ "[0-9]{2}"}
-  {Token.string == "-"} | {Token.string == "/"} 
-  {Token.string =~ "[0-9]{2}"}
-  {Token.string == "-"} | {Token.string == "/"} 
-  {Token.string =~ "[0-9]{4}"}
+  ({Token.kind == "number",Token.string >0,Token.string <32}) // un numero del 1 al 31
+  ({Token.string == "-"} | {Token.string == "/"} )
+  ({Token.kind == "number",Token.string >0,Token.string <13}) // un numero del 1 al 12
+  ({Token.string == "-"} | {Token.string == "/"} )
+  ({Token.kind == "number",Token.length<5}) // un numero del 1 al 12
 ):identificacionFecha
 -->
 :identificacionFecha{
@@ -35,5 +35,5 @@ String str = (String)fm.get("string");
 System.out.println(str);
 }
 },
-:identificacionFecha.FechaObtenida = {kind = "identificacionFecha", rule = "identificacionFecha"}
+:identificacionFecha.fecha = {kind = "identificacionFecha", rule = "identificacionFecha"}
 
