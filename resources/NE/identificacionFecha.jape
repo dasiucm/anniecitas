@@ -35,5 +35,25 @@ String str = (String)fm.get("string");
 System.out.println(str);
 }
 },
-:identificacionFecha.fecha = {kind = "identificacionFecha", rule = "identificacionFecha"}
+:identificacionFecha.fecha = {kind = "identificacionFecha", rule = "identificacionFecha1"}
 
+Rule: identificacionFecha2
+Priority: 80
+(
+  ({Token.kind == "number",Token.string >0,Token.string <32}) // un numero del 1 al 31
+  ({SpaceToken})+
+  ({Token.string == "de"} )
+  ({SpaceToken})+
+  ({Lookup.minorType == "Mes"}) // mes
+):identificacionFecha
+-->
+:identificacionFecha{
+System.out.println("______________ rule identificacionFecha ");
+System.out.println("The individual tokens : " );
+for (Annotation tok : identificacionFechaAnnots) {
+FeatureMap fm = tok.getFeatures();
+String str = (String)fm.get("string");
+System.out.println(str);
+}
+},
+:identificacionFecha.fecha = {kind = "identificacionFecha", rule = "identificacionFecha2"}
