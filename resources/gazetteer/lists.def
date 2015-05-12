@@ -28,4 +28,5 @@ anular.lst::::inicioAnulacion
 confirmacion.lst::::si
 negacion.lst::::no
 fechasPasadas.lst::fechaPasada:spanish:fechaPasada
-preposiciones.lst:::spanish::preposicion
+preposiciones.lst:::spanish:::preposicion
+determinantes.lst::determinante:spanish:determinante
