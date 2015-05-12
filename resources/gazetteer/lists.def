@@ -25,8 +25,8 @@ peticion.lst:InicioPeticion
 consultas.lst:consulta:consulta:spanish:consulta
 nombresPersona.lst::presentacion:spanish:nombre
 anular.lst::::inicioAnulacion
-confirmacion.lst::::si
+confirmacion.lst::si:spanish:si
 negacion.lst::::no
 fechasPasadas.lst::fechaPasada:spanish:fechaPasada
-preposiciones.lst:::spanish:::preposicion
-determinantes.lst::determinante:spanish:determinante
+preposiciones.lst::preposicion:spanish
+determinantes.lst::determinante:spanish

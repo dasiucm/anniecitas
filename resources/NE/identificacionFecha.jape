@@ -42,7 +42,7 @@ Priority: 80
 (
   ({Token.kind == "number",Token.string >0,Token.string <32}) // un numero del 1 al 31
   ({SpaceToken})+
-  ({Token.string == "de"} )
+  ({Lookup.minorType == "preposicion"}) 
   ({SpaceToken})+
   ({Lookup.minorType == "Mes"}) // mes
 ):identificacionFecha
@@ -57,3 +57,24 @@ System.out.println(str);
 }
 },
 :identificacionFecha.fecha = {kind = "identificacionFecha", rule = "identificacionFecha2"}
+
+
+Rule: identificacionFecha3
+Priority: 70
+(
+  
+  ({Lookup.minorType == "determinante"}) 
+  ({SpaceToken})+
+  ({Token.kind == "number",Token.string >0,Token.string <32}) // un numero del 1 al 31
+):identificacionFecha
+-->
+:identificacionFecha{
+System.out.println("______________ rule identificacionFecha ");
+System.out.println("The individual tokens : " );
+for (Annotation tok : identificacionFechaAnnots) {
+FeatureMap fm = tok.getFeatures();
+String str = (String)fm.get("string");
+System.out.println(str);
+}
+},
+:identificacionFecha.fechaNumero = {kind = "identificacionFecha", rule = "identificacionFecha3"}
