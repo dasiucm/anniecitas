@@ -78,3 +78,68 @@ System.out.println(str);
 }
 },
 :identificacionFecha.fechaNumero = {kind = "identificacionFecha", rule = "identificacionFecha3"}
+
+
+Rule: identificacionFecha4
+Priority: 60
+(
+  ({Lookup.minorType == "preposicion"}) 
+  ({SpaceToken})+
+  ({Lookup.minorType == "determinante"}) 
+  ({SpaceToken})+
+  ({Token.kind == "number",Token.string >0,Token.string <32}) // un numero del 1 al 31
+):identificacionFecha
+-->
+:identificacionFecha{
+System.out.println("______________ rule identificacionFecha ");
+System.out.println("The individual tokens : " );
+for (Annotation tok : identificacionFechaAnnots) {
+FeatureMap fm = tok.getFeatures();
+String str = (String)fm.get("string");
+System.out.println(str);
+}
+},
+:identificacionFecha.fechaNumero = {kind = "identificacionFecha", rule = "identificacionFecha4"}
+
+Rule: identificacionFecha5
+Priority: 60
+(
+  ({Lookup.minorType == "preposicion"}) 
+  ({SpaceToken})+
+  ({Lookup.minorType == "determinante"}) 
+  ({SpaceToken})+
+  ({Lookup.minorType == "dia"}) 
+  ({SpaceToken})+
+  ({Token.kind == "number",Token.string >0,Token.string <32}) // un numero del 1 al 31
+):identificacionFecha
+-->
+:identificacionFecha{
+System.out.println("______________ rule identificacionFecha ");
+System.out.println("The individual tokens : " );
+for (Annotation tok : identificacionFechaAnnots) {
+FeatureMap fm = tok.getFeatures();
+String str = (String)fm.get("string");
+System.out.println(str);
+}
+},
+:identificacionFecha.fechaNumero = {kind = "identificacionFecha", rule = "identificacionFecha5"}
+
+
+Rule: identificacionFecha6
+Priority: 60
+(
+  ({Token.string == "pal"}) 
+  ({SpaceToken})+
+  ({Token.kind == "number",Token.string >0,Token.string <32}) // un numero del 1 al 31
+):identificacionFecha
+-->
+:identificacionFecha{
+System.out.println("______________ rule identificacionFecha ");
+System.out.println("The individual tokens : " );
+for (Annotation tok : identificacionFechaAnnots) {
+FeatureMap fm = tok.getFeatures();
+String str = (String)fm.get("string");
+System.out.println(str);
+}
+},
+:identificacionFecha.fechaNumero = {kind = "identificacionFecha", rule = "identificacionFecha6"}

@@ -20,8 +20,8 @@ Rule: identificacionDNI
 Priority: 100
 (
  {Token.string =~ "[0-9]{8}", Token.length==8}	
- {Token.string == "-"}
- {Token.string =~ "[A-Z]{1}", Token.length==1}
+ {Token.string == "-"} 
+ ({Token.string =~ "[A-Z]{1}", Token.length==1} | {Token.string =~ "[a-z]{1}", Token.length==1})
 // {SpaceToken.string == " "}
 ):identificacionDNI
 -->
@@ -35,4 +35,3 @@ System.out.println(str);
 }
 },
 :identificacionDNI.dni = {kind = "identificacionDNI", rule = "identificacionDNI"}
-
