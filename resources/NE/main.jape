@@ -19,6 +19,7 @@ saludo
 peticionCita
 identificacionDNI
 identificacionFecha
+identificacionMedicoIndeterminado
 numberletter 
 url_pre
 url

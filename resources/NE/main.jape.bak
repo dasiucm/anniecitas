@@ -18,6 +18,7 @@ Phases:
 saludo
 peticionCita
 identificacionDNI
+identificacionFecha
 numberletter 
 url_pre
 url
